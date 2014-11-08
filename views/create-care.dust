@@ -1,0 +1,58 @@
+<div id="create-care">
+	<form id="create-request" method="post" action="/createRequest">
+	<a href="#" class="list-group-item list-group-item-info">
+		<input type="hidden" name="raised_by" id="raised_by" value={data.userId} />
+		<div class="input-select">
+			Care Type:
+			<select class="selectpicker" name="request_category" id="request_category" onchange='{
+				 var divid = "create-"+this.value;
+				 var ids = [ "create-01" , "create-02" ,"create-03" ,"create-04" ,"create-05",
+				 			"create-11"] ;
+				 ids.forEach(function(id){
+				 	var div=document.getElementById(id);
+			 		if(id === div) {
+			 			div.style.display = "block";
+			 		} else {
+			 			div.style.display = "none";
+			 		}
+			 	});
+			}'>
+				<option>Select Care:</option>
+				<optgroup label="Individual Care">
+      				<option value="01">Birthday/Anniversary</option>
+      				<option value="02">Marriage</option>
+      				<option value="03">Education</option>
+      				<option value="04">Farewell/BestWishes</option>
+      			</optgroup>
+      			<optgroup label="Social Care">
+      				<option value="11">Environment</option>
+      				<option value="12">Old Age/ Orphan</option>
+      			</optgroup>
+      			<optgroup label="Religious Care">
+      				<option value="21">Temple Construction</option>
+      				<option value="22">Pandal Puja</option>
+      				<option value="23">Mosque Construction</option>
+      				<option value="24">Haz Yatra Support</option>
+      			</optgroup>
+		  </select>
+		</div>
+	</a>
+	<a href="#" class="list-group-item list-group-item-info">
+		<div id="create-00">
+			<div>Care Title:<input type="text" name="request_title" id="request_title" placeholder="Request Title"/></div>
+			{>"create_fields"/}
+			<div>Care  Des:<input type="text" name="request_desc" id="request_desc" placeholder="Request Desc"/></div>
+			<div>Facebook Link<input type="text" name="fb_link" id="fb_link" placeholder="Facebook Link"/></div>
+			<div>Twitter Link<input type="text" name="tw_link" id="tw_link" placeholder="Twitter Link"/></div>
+		</div>
+	</a>
+	<a href="#" class="list-group-item list-group-item-info">
+		<div class="input-button">
+		   	<input style="height: 40px;width: 250px; font-size: 18px;" type="submit" value="CreateRequest"/>
+		</div>
+	</a>
+    </form>
+</div>
+<script>
+alert($('#request_category').is(':checked'));
+</script>

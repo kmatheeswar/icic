@@ -1,0 +1,38 @@
+<div id="create-fields">
+	
+	<div id="create-01" name="Birthday/Anniversary" style="display: none;">
+		<div>B'day On:<input type="text" id="birth_date" name="birth_date" placeholder="dd/mm"/></div>
+	</div>
+	<div id="create-02" name="Marriage" style="display: none;">
+		<div>Marriage Date:<input type="text" name="marriage_date" id="marriage_date" placeholder="dd/mm"/></div>
+	</div>
+	<div id="create-03" id="education" name="education" style="display: none;">
+		Select SubCategory: <select class="selectpicker" name="education_subcategory" id="education_subcategory">
+			<option value="0300">Select Care SubCategory:</option>
+			<option value="0301">Admission Fee</option>
+			<option value="0302">Yearly Fee</option>
+			<option value="0303">Hostel Fee</option>
+			<option value="0304">Stationary</option>
+			<option value="0305">Dress Material</option>
+			<option value="0306">Equipment/Tools</option>
+			<option value="0307">Others</option>
+		</select>
+		<div>Course: <input type="text" name="course" id="course" placeholder="Course"/></div>
+		<div>Institution: <input type="text" name="institution" id="institution" placeholder="College"/></div>
+		<div>StudentId: <input type="text" name="student_id" id="student_id" placeholder="Student Id"/></div>
+		<div>Institution Contact Number: <input type="text" id="institution_contact" name="institution_contact" placeholder="College Contact Number"/></div>
+	</div>
+	<div id="create-04" style="display: none;">
+		<div><input type="text" id="event_on" name="event_on" placeholder="event_on"/></div>
+	</div>
+
+
+	<div id="create-11" style="display: none;">
+		<select class="selectpicker" name="environment_subcategory" id="environment_subcategory">
+			<option value="1100">Select Event:</option>
+			<option value="1101">Planting</option>
+			<option value="1102">Clean</option>
+			<option value="1103">Others</option>
+		</select>
+	</div>
+</div>

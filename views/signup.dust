@@ -1,0 +1,26 @@
+
+<div id="signup_div">
+<div class="list-group">
+  <div id="signup_facebbok"><a href="#" class="list-group-item list-group-item-success">{>"fblogin"/}</a></div>
+  <a href="javascript:;" class="list-group-item list-group-item-info" onclick='{
+  	$("#signup_facebbok").hide();
+  	$("#signup_form").show();
+
+  }'><h3>Register with Email</h3>
+				<form id="signup_form" method="post" action="/signup" style="display:none">
+			<div class="input-text">
+				<input style="height: 40px;width: 250px; font-size: 18px;"type="text" placeholder="Email" id="email" name="email" />
+			</div>
+			<div class="input-text">
+		    	<input style="height: 40px;width: 250px; font-size: 18px;"type="password" placeholder="Password" id="password" name="password" />
+		    </div>
+			<div><input style="height: 40px;width: 250px; font-size: 18px;"type="text" placeholder="First Name" id="fname" name="fname"/></div>
+			<div><input style="height: 40px;width: 250px; font-size: 18px;"type="text" placeholder="Last Name" id="lname" name="lname"/></div>
+			<div><input style="height: 40px;width: 250px; font-size: 18px;"type="text" placeholder="Mobile" id="mobile" name="mobile"/></div>
+			<div class="input-button">
+		    	<input style="height: 40px;width: 250px; font-size: 18px;" type="submit" name="signup-button" value="Signup"/>
+		    </div>
+		</form>
+  </a>
+</div>
+</div>

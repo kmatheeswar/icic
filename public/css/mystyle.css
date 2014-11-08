@@ -1,0 +1,257 @@
+html, body{
+	font-family: 'Open Sans', sans-serif;
+	background:#6cc5d9;
+	display: block;
+}
+div{
+	line-height: 45px;
+}
+.container{
+	width: 970px;
+	height: 500px;
+	margin: 0 auto;
+}
+.topheader-wrapper{
+	height: 10px;
+	margin: auto;
+	}
+.topheader{
+	border-top-width: 5px;
+	border-top-style: solid;
+	border-top-color: #6cc5d9;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #6cc5d9;
+}
+
+.slide-show {
+	border-top-width: 35px;
+	border-top-style: solid;
+	border-top-color: #6cc5d9;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #6cc5d9;
+	padding-top: 20px;
+}
+
+.slide-show h1 {
+	font-size: 42px;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	letter-spacing: -2px;
+	line-height: 52px;
+}
+.slide-show h2 {
+font-size: 20px;
+line-height: 10px;
+color: #333333;
+text-align: center;
+font-family: 'lato', sans-serif;
+font-weight: 300;
+letter-spacing: 0;
+margin-top: 5px;
+padding-top: 5px;
+}
+
+#maincontent-left h2 {
+	font-size: 25px;
+	line-height: 20px;
+	color: #FFFFFF;
+	text-align: left;
+	font-family: 'lato', sans-serif;
+	font-weight: 300;
+	letter-spacing: 0;
+	margin-top: 5px;
+	padding-top: 5px;
+	padding-bottom: 20px;	
+}
+
+#maincontent-left h3 {
+	font-size: 16px;
+	line-height: 10px;
+	color: grey;
+	text-align: left;
+	font-family: 'lato', sans-serif;
+	font-weight: 300;
+	letter-spacing: 0;
+	margin-top: 5px;
+	padding-top: 10px;
+	padding-left: 5px;
+}
+
+.header_right{
+	float: left;
+	padding-top: 20px;
+	width: 300 px;
+}
+.header_right{
+	float: right;
+	padding-top: 20px;
+	width: 300 px;
+}
+.float_left{
+	float: left;
+	margin: auto;	
+}
+
+.float_right{
+	float: right;
+}
+.span_class1{
+	margin: auto;
+}
+
+a#logo_img{
+	
+	height: 50px;
+	width: 150px;
+	margin-top: 6px;
+	float: left;
+	background: url(../images/logo_img.png) no-repeat;
+}
+a.top-menu{
+	height: 33px;
+float: right;
+color: white;
+padding: 18px 6px 0 6px;
+font-size: 15px;
+line-height: 16px;
+font-family: 'Lato', sans-serif;
+font-weight: 300;
+letter-spacing: 0;
+}
+
+a.top-menu.su {
+	background: url(../images/signup.png) no-repeat;
+	width: 79px;
+	height: 29px;
+	float: right;
+	margin-top: 12px;
+	margin-left: 6px;
+	margin-right: -2px;
+	border-radius: 5px;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px 2px #996600;
+}
+
+
+#br{
+	padding-top: 20px;
+	width: 2px;
+	height: 42px;
+	background: url(images/hd_br.png) no-repeat;
+	float: left;
+}
+
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.item{
+    background: #333;    
+    text-align: center;
+    height: 300px !important;
+}
+.carousel{
+    margin-top: 20px;
+}
+.bs-example{
+	margin: 20px;
+}
+#maincontent-left{
+	float: left;
+	width: 20%;
+	height: 300px;
+}
+#maincontent-right{
+	float: right;
+	width: 80%;
+	
+}
+.main-content-head {
+	width: 0px;
+	display: block;
+	border-top-width: 0px;
+	border-top-style: solid;
+	border-bottom-width: 0px;
+	border-bottom-style: solid;
+	padding-left: 210px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+.request-image{
+	width: 75%;
+	height: 150;
+	padding-left: 20px;
+	
+}
+.search_icon {
+width: 70px;
+height: 50px;
+float: left;
+background: url(../images/hover_search.png) no-repeat 10px 1px;
+background-color: darkgray;
+}
+
+.search_field {
+padding: 8px 20px;
+border: none;
+color: #cccccc;
+font-size: 28px;
+}
+
+#register-div{
+	display: none;
+}
+#blank-line {
+	width: 10px;
+}
+.topheader{
+	width: 100%;
+	background-color: gainsboro;
+}
+#login_div{
+	width: 434px;
+	display: block;
+	margin: 61px auto 80px;
+	border-radius: 16px;
+	text-align: center;
+	background-color: gainsboro;
+}
+#login_head {
+	height: 88px;
+	width: 100%;
+	background: url(../images/logo_img.png) no-repeat 128px 16px;
+}
+
+#signup_div{
+	width: 434px;
+	display: block;
+	margin: 61px auto 80px;
+	border-radius: 16px;
+	text-align: center;
+	background-color: gainsboro;
+}
+#create-care {
+	width: 434px;
+	display: block;
+	margin: 61px auto 80px;
+	border-radius: 16px;
+	height: 300px;
+	background-color: gainsboro;	
+}
+
+td, th {
+padding: 0;
+text-align: center;
+}

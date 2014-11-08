@@ -1,0 +1,5 @@
+<h1>Care for All !</h1>
+<h2><span class="line100 home">Give Your Share To Show Your Care.</span></h2>
+{@if cond="'{data.loggedIn}' === 'true'"}
+<a href="javascript:;" onclick="displayCreateCare();" title="raise contribution request"><h3 style="text-align: center">Raise Care Request</h3></a>
+{/if}

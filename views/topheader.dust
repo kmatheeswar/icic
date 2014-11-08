@@ -1,0 +1,23 @@
+<div class="topheader">
+<a id="logo_img" href="#"/>
+{@if cond="'{data.loggedIn}' === 'false'"}
+	<a class="top-menu su" href="javascript:;" onclick="fnDisplayRegister();"/>
+	<a class="top-menu si" href="javascript:;" onclick="fnDisplayLogin();" >Sign In</a>
+{:else}
+	<a class="top-menu si" href="javascript:;" style="
+												color: #428bca;
+												font-weight: 500;
+												font-size: 18px;
+												text-decoration: underline;">{>"logout" /}</a>
+	<a class="top-menu si" href="javascript:;" style="
+												color: #428bca;
+												font-weight: 500;
+												font-size: 18px;
+												text-decoration: underline;">{data.userData_name} </a>
+{/if}
+<a class="top-menu" style="margin-left: 4px; margin-right: 6px;"></a>
+<a class="top-menu" href="/help"/>Help</a>
+<a class="top-menu" href="/hitw"/>How it Works</a>
+<a class="top-menu" href="/contacts"/>Contact</a>
+<a class="top-menu" href="/"/>Home</a>
+</div>

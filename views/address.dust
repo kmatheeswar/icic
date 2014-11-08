@@ -1,0 +1,5 @@
+<div><input type="text" placeholder="Street1"/></div>
+<div><input type="text" placeholder="Street2"/></div>
+<div><input type="text" placeholder="City"/></div>
+<div><input type="text" placeholder="State"/></div>
+<div><input type="text" placeholder="Country"/></div>

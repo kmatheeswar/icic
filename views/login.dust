@@ -1,0 +1,17 @@
+<div id="login_div">
+	<div class="list-group">
+	<div id="login_facebook">
+		<a href="#" class="list-group-item list-group-item-success">{>"fblogin"/}</a>
+	</div>
+	<a href="javascript:;" class="list-group-item list-group-item-info" onclick='{
+  			$("#login_facebook").hide();
+  			$("#login_main").show();
+			}'><h3>Login with Email</h3>
+			<form  id="login_main" method="post" action="/login" style="display:none">
+				<div> <input style="height: 40px;width: 250px; font-size: 18px;" type="text" placeholder="Email" name="email" /> </div>
+	    		<div> <input style="height: 40px;width: 250px; font-size: 18px;"type="password" placeholder="Password" name="password" /> </div>
+    			<input style="height: 40px;width: 250px; font-size: 18px;" type="submit" name="auth_user" value="Login"/>
+			</form>
+	</a>
+</div>
+</div>

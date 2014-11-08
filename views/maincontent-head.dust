@@ -1,0 +1,5 @@
+<div class="search_icon"></div>
+<input width="100" class="search_field" id="autocomplete" placeholder="Search by City State or Care ..." class="ui-autocomplete-input" autocomplete="off" style="
+    height: 50px;
+    width: 600px;
+">

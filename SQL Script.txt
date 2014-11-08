@@ -1,0 +1,173 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.12
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:8889
+-- Generation Time: Nov 08, 2014 at 03:59 AM
+-- Server version: 5.5.34
+-- PHP Version: 5.5.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `ICIC`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `BENEFICIARY`
+--
+
+CREATE TABLE `BENEFICIARY` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `CATEGORY` varchar(10) NOT NULL COMMENT 'INDIVIDUAL, GROUP',
+  `NAME` varchar(50) NOT NULL,
+  `STREET1` varchar(20) NOT NULL,
+  `STREET2` varchar(20) NOT NULL,
+  `CITY` varchar(20) NOT NULL,
+  `STATE` varchar(20) NOT NULL,
+  `ZIP` varchar(6) NOT NULL,
+  `COUNTRY` varchar(10) NOT NULL,
+  `ID_TYPE` varchar(20) NOT NULL COMMENT 'VOTERID,DRIVERL',
+  `ID_VALUE` varchar(20) NOT NULL,
+  `FB_LINK` varchar(100) NOT NULL,
+  `TW_LINK` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1001 ;
+
+--
+-- Dumping data for table `BENEFICIARY`
+--
+
+INSERT INTO `BENEFICIARY` (`ID`, `CATEGORY`, `NAME`, `STREET1`, `STREET2`, `CITY`, `STATE`, `ZIP`, `COUNTRY`, `ID_TYPE`, `ID_VALUE`, `FB_LINK`, `TW_LINK`) VALUES
+(1000, 'sdfa', 'sad', 'asda', 'sdad', '', '', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `IMAGES`
+--
+
+CREATE TABLE `IMAGES` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `REQUEST_ID` bigint(20) NOT NULL,
+  `IMAGE_NAME` varchar(20) NOT NULL,
+  `IMAGE` blob NOT NULL,
+  `STATUS` varchar(4) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `LOGIN_USER`
+--
+
+CREATE TABLE `LOGIN_USER` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  `signup_type` varchar(10) NOT NULL COMMENT 'facebook , web',
+  `remember_token` varchar(100) NOT NULL,
+  `user_group` varchar(10) NOT NULL COMMENT 'INDIVIDUAL, NGO',
+  `name` varchar(50) NOT NULL,
+  `fb_link` varchar(100) DEFAULT NULL,
+  `tw_link` varchar(100) DEFAULT NULL,
+  `status` varchar(4) NOT NULL DEFAULT 'A' COMMENT 'A , I',
+  `date` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_email` (`email`,`status`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='User Detail who can login to the system' AUTO_INCREMENT=80 ;
+
+--
+-- Dumping data for table `LOGIN_USER`
+--
+
+INSERT INTO `LOGIN_USER` (`id`, `email`, `password`, `signup_type`, `remember_token`, `user_group`, `name`, `fb_link`, `tw_link`, `status`, `date`) VALUES
+(75, 'rkjha.inbox@gmail.com', '1234', 'undefined', 'undefined', 'undefined', 'Rakesh', 'undefined', 'undefined', 'A', 'undefined'),
+(76, 'rakesh.hbti@yahoo.com', '11111', 'WEB', 'undefined', 'undefined', 'Rahul', 'undefined', 'undefined', 'A', 'undefined'),
+(77, 'sdf', 'da', 'WEB', 'undefined', 'undefined', 'sd', 'undefined', 'undefined', 'A', 'Sun Oct 12 2014'),
+(78, 'xczx', 'sd', 'WEB', 'undefined', 'undefined', 'sd', 'undefined', 'undefined', 'A', 'Sun Oct 12 2014'),
+(79, 'aSD', 'XZC', 'WEB', 'undefined', 'undefined', 'SDS', 'undefined', 'undefined', 'A', 'Sun Oct 12 2014');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `REQUEST`
+--
+
+CREATE TABLE `REQUEST` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `request_category` varchar(50) NOT NULL,
+  `fb_link` varchar(100) NOT NULL,
+  `tw_link` varchar(100) NOT NULL,
+  `event_start_on` varchar(20) NOT NULL,
+  `event_end_on` varchar(20) DEFAULT NULL,
+  `description` text NOT NULL,
+  `date_created` varchar(20) NOT NULL,
+  `status` varchar(4) NOT NULL DEFAULT 'A',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `REQUEST_CONVERSATION`
+--
+
+CREATE TABLE `REQUEST_CONVERSATION` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `REQUEST_ID` bigint(20) NOT NULL COMMENT 'FK Request.ID',
+  `COMMENT_BY` bigint(20) NOT NULL COMMENT 'FK Login_User.ID',
+  `COMMENT` varchar(400) NOT NULL,
+  `DATE_COMMENTED` varchar(20) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `USER_REQUEST`
+--
+
+CREATE TABLE `USER_REQUEST` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `raised_by_id` bigint(20) NOT NULL,
+  `category` varchar(20) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `beneficiary_id` bigint(20) NOT NULL,
+  `status` varchar(2) NOT NULL DEFAULT 'A',
+  `time_created` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`raised_by_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=130 ;
+
+--
+-- Dumping data for table `USER_REQUEST`
+--
+
+INSERT INTO `USER_REQUEST` (`id`, `raised_by_id`, `category`, `title`, `beneficiary_id`, `status`, `time_created`) VALUES
+(124, 74, '01', 'sdfgsdf', 0, 'A', 0),
+(125, 74, '03', 'dfgsdf', 0, 'A', 0),
+(126, 75, '22', 'sdfa', 0, 'A', 0),
+(127, 75, '12', 'asd', 0, 'A', 0),
+(128, 75, '01', 'asdas', 0, 'A', 0),
+(129, 75, '02', 'sdfaD', 0, 'A', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `VIDEOS`
+--
+
+CREATE TABLE `VIDEOS` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `REQUEST_ID` bigint(20) NOT NULL,
+  `FILE_NAME` varchar(20) NOT NULL,
+  `LINK` varchar(100) NOT NULL,
+  `DATE_UPLOADED` varchar(20) NOT NULL,
+  `STATUS` varchar(4) NOT NULL DEFAULT 'A',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

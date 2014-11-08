@@ -1,0 +1,7 @@
+<div id="maincontent-left">
+	<h2>Categories</h2>
+	<a href="javascript:;" onclick="loadRequest(this.title);" title="persoanl_event"><h3>Personal Events</h3></a>
+	<a href="javascript:;" onclick="loadRequest(this.title);" title="education"><h3>Child Education</h3></a>
+	<a href="javascript:;" onclick="loadRequest(this.title);" title="medical"><h3>Medical Treatment</h3></a>
+	<a href="javascript:;" onclick="loadRequest(this.title);" title="social_event"><h3>Social Events</h3></a>
+</div>
